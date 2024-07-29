@@ -1,6 +1,4 @@
-﻿using System.Security.Cryptography;
-using System.Text;
-using SHA3;
+﻿using System.Text;
 namespace Hashing
 {
 	internal class Program
@@ -12,11 +10,11 @@ namespace Hashing
 
 			Console.WriteLine("Demonstarting Hashing in .Net");
 			Console.WriteLine("-----------------------------");
-			Console.WriteLine("Origanl Message 1 : "+ _orignalMessage1);
-			Console.WriteLine("Orignal Message 2 : "+ _orignalMessage2);
+			Console.WriteLine("Origanl Message 1 : " + _orignalMessage1);
+			Console.WriteLine("Orignal Message 2 : " + _orignalMessage2);
 
 
-			var sha1_HashedMessage1 = Hashing.ComputeHashSha1(Encoding.UTF8.GetBytes(_orignalMessage1)); 
+			var sha1_HashedMessage1 = Hashing.ComputeHashSha1(Encoding.UTF8.GetBytes(_orignalMessage1));
 			var sha1_HashedMessage2 = Hashing.ComputeHashSha1(Encoding.UTF8.GetBytes(_orignalMessage2));
 
 			var sha256_HashedMessage1 = Hashing.ComputeHashSha256(Encoding.UTF8.GetBytes(_orignalMessage1));
@@ -129,6 +127,17 @@ namespace Hashing
 			// WE CAN ALSO USE OTHER 3RD PARTY LIBRARIES FOR HASHING AS GIVEN BELOW
 			//1. Bouncy Castle (.NET Standard/Framework Support)
 			//2. Sodium.Core (Modern .NET, libsodium Bindings)
+
+
+			Console.WriteLine("Demonstrating PBKDF = Password Based Key Derivation Functions");
+
+			var _passwordToHash = "VeryComplexPassword";
+			PBKDF2.HashPasswordWithSalt(_passwordToHash, 100); //will hash password 100 times
+			PBKDF2.HashPasswordWithSalt(_passwordToHash, 1000); //will hash password 1000 times
+			PBKDF2.HashPasswordWithSalt(_passwordToHash, 10000); //will hash password 10000 times
+			PBKDF2.HashPasswordWithSalt(_passwordToHash, 100000); //will hash password 100000 times
+
+			PBKDF2.HashPasswordWithSalt(_passwordToHash);
 
 			Console.ReadLine();
 
