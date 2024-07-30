@@ -8,6 +8,9 @@ namespace EnCryptionDecryption
 		static void Main(string[] args)
 		{
 
+
+			Console.WriteLine("DEMONSTRATING SYMMETRIC ENRCYPTION AND DECRYPTIONS");
+			Console.WriteLine("****************************************************");
 			Console.WriteLine("Demonstrating Encryption and Decryption AES");
 
 			const string _orignalText = "Same text for ecryption decrption";
@@ -72,8 +75,15 @@ namespace EnCryptionDecryption
 
 			Console.WriteLine("decrypted text : " + Encoding.UTF8.GetString(_decrypted_aesgcm));
 
+			Console.WriteLine();
+			Console.WriteLine();
+			Console.WriteLine("Protecting Key with Windows Data Protection API (DPAPI) to protect keys using System.Security.Cryptography.ProtectedData Nuget Package");
+			//install package System.Security.Cryptography.ProtectedData
+			Protection.ProtectTestData();
+			Protection.EncryptAndDecryptDataWithProtectedKey();
 
-
+			Console.WriteLine("DEMONSTRATING ASSYMMETRIC ENRCYPTION AND DECRYPTIONS");
+			Console.WriteLine("****************************************************");
 
 			Console.ReadLine();
 		}
