@@ -8,6 +8,7 @@ using System.Security.Cryptography;
 
 namespace EnCryptionDecryption
 {
+	//Symmetric Encryption and Decryption
 	internal static class Protection
 	{
 		internal static byte[] GenerateRandomKey(int KeySize)

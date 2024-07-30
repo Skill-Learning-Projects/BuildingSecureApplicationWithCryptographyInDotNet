@@ -84,6 +84,15 @@ namespace EnCryptionDecryption
 
 			Console.WriteLine("DEMONSTRATING ASSYMMETRIC ENRCYPTION AND DECRYPTIONS");
 			Console.WriteLine("****************************************************");
+			var rsaWithRSAKeyParams = new RSAWithParameterKey();
+			rsaWithRSAKeyParams.RSAWithRSAKeyParameters();
+
+			var rsaWithRSACSP= new RSAWithCSPKey();
+			rsaWithRSACSP.RSAWithRSACSPKey();
+
+			var newRSA = new NewRSA();
+			newRSA.NewRSAEncryptDecrypt();
+			newRSA.NewRSAEncryptDecryptWithKeyExport();
 
 			Console.ReadLine();
 		}

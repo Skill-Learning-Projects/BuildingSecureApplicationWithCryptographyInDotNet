@@ -6,8 +6,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Security.Cryptography;
 
+
 namespace EnCryptionDecryption
 {
+	//Symmetric Encryption and Decryption
 	internal class AES
 	{
 		internal byte[] GenerateRandomKey(int KeySize)

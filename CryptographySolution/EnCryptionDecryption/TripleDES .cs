@@ -8,6 +8,7 @@ using System.Security.Cryptography;
 
 namespace EnCryptionDecryption
 {
+	//Symmetric Encryption and Decryption
 	internal class TripleDES
 	{
 		internal byte[] GenerateRandomKey(int KeySize)

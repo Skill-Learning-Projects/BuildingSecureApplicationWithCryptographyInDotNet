@@ -8,6 +8,7 @@ using System.Security.Cryptography;
 
 namespace EnCryptionDecryption
 {
+	//Symmetric Encryption and Decryption
 	internal class AESGCME
 	{
 		internal byte[] GenerateRandomKey(int KeySize)
