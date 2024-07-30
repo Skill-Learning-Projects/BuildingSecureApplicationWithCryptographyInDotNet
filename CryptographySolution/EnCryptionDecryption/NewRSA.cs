@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace EnCryptionDecryption
 {
+	//ASymmetric Encryption and Decryption
 	internal class NewRSA
 	{
 		private RSA _rsa;
